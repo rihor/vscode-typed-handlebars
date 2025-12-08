@@ -1,0 +1,21 @@
+<div class="user-profile">
+  <h1>{{user.name}}</h1>
+  <p>{{user.email}}</p>
+  {{#if user.age}}
+    <p>Age: {{user.age}}</p>
+  {{/if}}
+  
+  <h2>Posts</h2>
+  {{#each posts}}
+    <article>
+      <h3>{{title}}</h3>
+      {{#if published}}
+        <span class="published">✓ Published</span>
+      {{/if}}
+    </article>
+  {{/each}}
+  
+  <h3>Settings</h3>
+  <p>Theme: {{settings.theme}}</p>
+  <p>Notifications: {{settings.notifications}}</p>
+</div>

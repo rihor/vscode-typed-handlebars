@@ -20,7 +20,37 @@
 		"vscode": "^0.10.1",
 		"bun": ">=1.0.0"
 	},
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onLanguage:handlebars"
+	],
+	"scripts": {
+		"compile": "bun run tsc -p ./",
+		"watch": "bun run tsc -watch -p ./"
+	},
+	"dependencies": {
+		"typescript": "^5.0.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.80.0",
+		"@types/node": "^20.0.0"
+	},
 	"contributes": {
+		"configuration": {
+			"title": "Handlebars IntelliSense",
+			"properties": {
+				"handlebars.intellisense.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable IntelliSense for Handlebars files"
+				},
+				"handlebars.intellisense.cacheEnabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Cache parsed TypeScript interfaces"
+				}
+			}
+		},
 		"languages": [
 			{
 				"id": "handlebars",
