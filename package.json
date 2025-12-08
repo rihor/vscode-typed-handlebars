@@ -3,9 +3,6 @@
 	"description": "Handlebars Visual Studio Code",
 	"version": "0.4.1",
 	"publisher": "andrejunges",
-	"engines": {
-		"vscode": "^0.10.1"
-	},
 	"icon": "images/icon.png",
 	"repository": {
 		"type": "git",
@@ -19,6 +16,10 @@
 		"Languages",
 		"Snippets"
 	],
+	"engines": {
+		"vscode": "^0.10.1",
+		"bun": ">=1.0.0"
+	},
 	"contributes": {
 		"languages": [
 			{
